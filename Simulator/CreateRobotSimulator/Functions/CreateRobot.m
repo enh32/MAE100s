@@ -29,6 +29,7 @@ classdef CreateRobot < handle
         rangeRSDepth = 10       % Max depth of real sense (m)
         rangeMinRSDepth = 0.175 % Min depth of real sense (m)
         rsdepth_n_pts = 9;      % Number of depth points to sample
+        angleArray= linspace(-angRangeLidar/2,angRangeLidar/2,numPtsLidar) %Array of LIDAR angles
     end
     
     properties(GetAccess= 'public', SetAccess= 'private')
