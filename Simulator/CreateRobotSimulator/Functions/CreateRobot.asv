@@ -3819,8 +3819,6 @@ classdef CreateRobot < handle
         %
         %   If no tags are detected, returns an empty array
          % Check for valid input
-         %Changing IF statement so this can be called on a static robot
-         %object [AA]
             if false %~isa(obj,'CreateRobot')
 %                 error('Simulator:invalidInput',...
 %                     ['Input to RealSenseTag must have class '...
@@ -3851,10 +3849,7 @@ classdef CreateRobot < handle
                         fcn_called= sprintf(['[%.3f %.3f %.3f %.3f %.3f]'...
                             ' = RealSenseTag'],X(1),Y(1),Z(1),ROT(1),Ntag(1));
                     end
-                    
-                    if obj.autoEnable  %only run this if in autonomous mode
-                        addFcnToOutput(obj,fcn_called)
-                    end
+%                   addFcnToOutput(obj,fcn_called)
                    
                     dt = toc(request_time);
                     
