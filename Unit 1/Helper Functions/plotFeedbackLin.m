@@ -12,6 +12,7 @@ pose_history = pose_current;
 
 % Set up the plotting
 f = figure;
+set(gcf,'Visible','on')
 p = plot(pose_history(1,:),pose_history(2,:));
 hold on
 title(plot_title); 
