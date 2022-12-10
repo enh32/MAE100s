@@ -810,7 +810,7 @@ classdef CreateRobot < handle
         
     % Sensor Functions
         function bump= genBump(obj,map)
-        % bump = genBump(obj)
+        % bump = genBump(obj,map)
         % Generates a reading for all bump sensors
         % Input:
         % obj - Instance of class CreateRobot
@@ -858,7 +858,7 @@ classdef CreateRobot < handle
         end
         
         function cliff= genCliff(obj, map)
-        % cliff = genCliff(obj)
+        % cliff = genCliff(obj,map)
         % Generates a reading for the cliff sensors
         %
         % Input:
@@ -967,7 +967,7 @@ classdef CreateRobot < handle
         end
         
         function wall= genIR(obj,map)
-        % wall = genIR(obj)
+        % wall = genIR(obj,map)
         % Generates a reading for the infrared wall sensor
         %
         % Input:
@@ -1005,7 +1005,7 @@ classdef CreateRobot < handle
         end
         
         function vwall= genVWall(obj,map)
-        % vwall = genVWall(obj)
+        % vwall = genVWall(obj,map)
         % Generates a reading for the virtual wall sensor
         %
         % Input:
@@ -1088,7 +1088,7 @@ classdef CreateRobot < handle
         end
         
         function distSonar= genSonar(obj,map)
-        % distSonar = genSonar(obj)
+        % distSonar = genSonar(obj,map)
         % Generates a reading for all sonar sensors
         %
         % Input:
@@ -1148,7 +1148,7 @@ classdef CreateRobot < handle
         end
         
         function rsDepth= genRSDepth(obj,map)
-        % rsDepth = genRSDepth(obj)
+        % rsDepth = genRSDepth(obj,map)
         % Generates a reading for the RealSense Depth sensor
         %
         % Input:
@@ -1240,7 +1240,7 @@ classdef CreateRobot < handle
         end
         
         function distLidar= genLidar(obj,map)
-        % distLidar = genLidar(obj)
+        % distLidar = genLidar(obj,map)
         % Generates a reading for the LIDAR sensor
         %
         % Input:
@@ -1290,7 +1290,7 @@ classdef CreateRobot < handle
 
         
         function [ang, dist, color, id]= genCamera(obj,map)
-        % [ang dist color id] = genCamera(obj)
+        % [ang dist color id] = genCamera(obj,map)
         % Generates the output from the blob detection on the camera,
         % detects only beacons
         % Camera is located at 'cameraDisplace' distance (+0.13m) 
@@ -3583,7 +3583,7 @@ classdef CreateRobot < handle
         end
         
         function state= VirtualWallSensorCreate(obj,map)
-        % state = VirtualWallSensorCreate(obj)
+        % state = VirtualWallSensorCreate(obj,map)
         % Reads the state of the virtual wall sensor
         %
         % Input:
@@ -3719,7 +3719,7 @@ classdef CreateRobot < handle
         end
         
         function distance= ReadSonarMultiple(obj,sonarNum,map)
-        % distance = ReadSonarMultiple(obj,sonarNum)
+        % distance = ReadSonarMultiple(obj,sonarNum,map)
         % Reads the distance returned by the specified sonar sensor
         %
         % Input:
@@ -3793,7 +3793,7 @@ classdef CreateRobot < handle
         end
         
         function distScan= LidarSensorCreate(obj,map)
-        % distScan = LidarSensorCreate(obj)
+        % distScan = LidarSensorCreate(obj,map)
         % Reads the range of distances from the LIDAR sensor
         %
         % Input:
@@ -3846,7 +3846,7 @@ classdef CreateRobot < handle
         end
         
         function [X, Y, Z, ROT, Ntag] = ReadBeacon(obj,map)
-        % [X Y Z ROT Ntag] = ReadBeacon(obj)
+        % [X Y Z ROT Ntag] = ReadBeacon(obj,map)
         % Reads the ARtag detection camera and reports 3-D cartesian
         % position in the camera reference frame, as well as the rotation
         % about the tag center
@@ -3909,7 +3909,7 @@ classdef CreateRobot < handle
         end
         
         function depth_array= RealSenseDist(obj,map)
-        % depth_array= RealSenseDist(obj)
+        % depth_array= RealSenseDist(obj,map)
         % Reads the depth from the Real Sense Depth Sensor
         %
         % Input:
@@ -3972,7 +3972,7 @@ classdef CreateRobot < handle
         end
         
         function tags = RealSenseTag(obj,map)
-        % tags = RealSenseTag(obj) Finds AprilTags in the image from the
+        % tags = RealSenseTag(obj,map) Finds AprilTags in the image from the
         % camera. Returns the id of the AprilTag, position in the frame of the
         % camera, and rotation about its center.
         %
@@ -4041,7 +4041,7 @@ classdef CreateRobot < handle
         end
         
         function [angle, dist, color]= CameraSensorCreate(obj,map)
-        % [angle dist color] = CameraSensorCreate(obj)
+        % [angle dist color] = CameraSensorCreate(obj,map)
         % Reads the output from the blob detection on the camera,
         %   detects only beacons
         %
