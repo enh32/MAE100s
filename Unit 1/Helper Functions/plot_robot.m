@@ -1,7 +1,7 @@
 function plot_robot(u_r, u_l, V,omega,L,r, plot_title)
 
-    title(plot_title+': Robot Velocities')
-
+    figure; 
+    title(plot_title); 
     hold on
     grid on
     axis equal
@@ -27,4 +27,6 @@ function plot_robot(u_r, u_l, V,omega,L,r, plot_title)
     rectangle('Position',[robotRad-r/4,-r,r/2,2*r],'EdgeColor','k')
     rectangle('Position',[-robotRad-r/4,-r,r/2,2*r],'EdgeColor','k')
     plot(y(:,1),y(:,2),'r-')
+    
+    set(gcf,'Visible','on')
 end

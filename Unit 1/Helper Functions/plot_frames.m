@@ -1,6 +1,7 @@
 % creates plots of a data point in the robot frame and global frame
 
 function plot_frames(robot_pose, dataxy_robot, dataxy_global, plot_title)
+figure; 
 
 radius = 0.13;
 lim = max(abs(dataxy_robot(:)));
@@ -37,4 +38,6 @@ plot([robot_pose(1),robot_pose(1)+radius*cos(robot_pose(3))], ...
 
 plot(dataxy_global(1,:),dataxy_global(2,:),'r.','markersize',10)
 sgtitle(plot_title)
+
+set(gcf,'Visible','on'); 
 end
